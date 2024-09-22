@@ -1,22 +1,15 @@
-{
-  "branches": ["main"],
-  "plugins": [
-    [
-      "@semantic-release/commit-analyzer",
-      {
-        "preset": "conventionalcommits",
-        "releaseRules": [
-          { "type": "fix", "release": "patch" },
-          { "type": "feat", "release": "minor" },
-          { "type": "perf", "release": "patch" },
-          { "type": "breaking", "release": "major" }
-        ]
-      }
-    ],
-    "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
-    "@semantic-release/github",
-    "@semantic-release/git"
+const config = {
+  branches: ['main'],
+  plugins: [
+    '@semantic-release/commit-analyzer',
+    '@semantic-release/release-notes-generator',
+    ["@semantic-release/git", {
+      "assets": ["dist/*.js", "dist/*.js.map"],
+      "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+    }],
+    '@semantic-release/github'
   ]
-}
+};
+
+module.exports = config;
 
