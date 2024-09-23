@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 // Basic route to display a smiley face
 app.get('/', (req, res) => {
-  res.send('<h1>😊 Welcome to the Smile App!</h1>');
+  res.send('<h1>😊 Welcome to the Demo App!</h1>');
 });
 
 // Start the server
