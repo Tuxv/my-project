@@ -8,7 +8,7 @@ const config = {
         { "type": "fix", "release": "patch" },
         { "type": "feat", "release": "minor" },
         { "type": "perf", "release": "patch" },
-        { "type": "breaking.*", "release": "major", "increment": true, "breaking": true}
+        { "type": /^breaking:.*$/i, "release": "major", "increment": true, "breaking": true }
       ],
       "debug": true
     },
