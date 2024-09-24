@@ -9,7 +9,8 @@ const config = {
         { "type": "feat", "release": "minor" },
         { "type": "perf", "release": "patch" },
         { "type": "breaking", "release": "major", "increment": true, "breaking": true}
-      ]
+      ],
+      "debug": true
     },
     "@semantic-release/release-notes-generator",
     "@semantic-release/git",
