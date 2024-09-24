@@ -6,14 +6,16 @@ const config = {
       "parser": "@semantic-release/commit-parser",
       "parserOpts": {
         "headerPattern": /^(\w+): (.*)$/,
-        "headerCorrespondence": ["type", "subject"]
+        "headerCorrespondence": ["type", "subject"],
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES"]
       },
       "releaseRules": [
         { "type": "fix", "release": "patch" },
         { "type": "feat", "release": "minor" },
         { "type": "perf", "release": "patch" },
         { "type": /^breaking:.*$/i, "release": "major", "increment": true, "breaking": true },
-        { "type": /^breaking$/i, "release": "major", "increment": true, "breaking": true }
+        { "type": /^breaking$/i, "release": "major", "increment": true, "breaking": true },
+        { "type": /^breaking:.*$/i, "release": "major", "increment": true, "breaking": true, "path": ".*" }
       ],
       "debug": true
     },
