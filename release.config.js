@@ -3,7 +3,13 @@ const config = {
   plugins: [
     '@semantic-release/commit-analyzer',
     {
-      "preset": "conventionalcommits"
+      "parser": "@semantic-release/conventional-commits-parser",
+      "releaseRules": [
+        { "type": "fix", "release": "patch" },
+        { "type": "feat", "release": "minor" },
+        { "type": "perf", "release": "patch" },
+        { "type": "breaking", "release": "major", "increment": true, "breaking": true}
+      ]
     },
     "@semantic-release/release-notes-generator",
     "@semantic-release/git",
