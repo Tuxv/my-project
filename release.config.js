@@ -27,4 +27,8 @@ const config = {
     },
     "@semantic-release/release-notes-generator",
     "@semantic-release/git",
-    '@semantic-release/github
+    '@semantic-release/github'
+  ] // <--- This bracket was missing
+};
+
+module.exports = config;
