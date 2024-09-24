@@ -3,7 +3,7 @@ const config = {
   plugins: [
     '@semantic-release/commit-analyzer',
     {
-      "parser": "@semantic-release/conventional-commits-parser",
+      "parser": "@semantic-release/commit-parser",
       "releaseRules": [
         { "type": "fix", "release": "patch" },
         { "type": "feat", "release": "minor" },
