@@ -3,7 +3,6 @@ const config = {
   plugins: [
     '@semantic-release/commit-analyzer',
     {
-      "preset": "conventionalcommits",
       "releaseRules": [
         { "type": "fix", "release": "patch" },
         { "type": "feat", "release": "minor" },
