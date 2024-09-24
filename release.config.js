@@ -4,11 +4,16 @@ const config = {
     '@semantic-release/commit-analyzer',
     {
       "parser": "@semantic-release/commit-parser",
+      "parserOpts": {
+        "headerPattern": /^(\w+): (.*)$/,
+        "headerCorrespondence": ["type", "subject"]
+      },
       "releaseRules": [
         { "type": "fix", "release": "patch" },
         { "type": "feat", "release": "minor" },
         { "type": "perf", "release": "patch" },
-        { "type": /^breaking:.*$/i, "release": "major", "increment": true, "breaking": true }
+        { "type": /^breaking:.*$/i, "release": "major", "increment": true, "breaking": true },
+        { "type": /^breaking$/i, "release": "major", "increment": true, "breaking": true }
       ],
       "debug": true
     },
