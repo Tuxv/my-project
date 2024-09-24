@@ -8,7 +8,7 @@ const config = {
         { "type": "fix", "release": "patch" },
         { "type": "feat", "release": "minor" },
         { "type": "perf", "release": "patch" },
-        { "type": "breaking", "release": "major" }
+        { "type": "breaking", "release": "major", "increment": "major"}
       ]
     },
     "@semantic-release/release-notes-generator",
