@@ -4,8 +4,8 @@ const config = {
     '@semantic-release/commit-analyzer',
     {
       "parserOptions": {
-        "headerPattern": /^(\w*)(?:\(([\w$\.]*)\))?\s*:\s*(.*)$/,
-        "headerCorrespondence": ["type", "scope", "subject"]
+        "headerPattern": /^(?:BREAKING CHANGE:?\s?|breaking(?:\(.+\))?:?\s?)(.*)$/i,
+        "headerCorrespondence": ["type", "subject"]
       },
       "releaseRules": [
         { "type": "fix", "release": "patch" },
