@@ -10,7 +10,11 @@ const config = {
         { "type": "breaking", "release": "major", "increment": "major"}
       ]
     },
-    "@semantic-release/release-notes-generator",
+    ["@semantic-release/release-notes-generator", {
+      "writerOpts": {
+        "filePath": "RELEASE_NOTES.md"
+      }
+    }],
     "@semantic-release/git",
     '@semantic-release/github'
   ]
