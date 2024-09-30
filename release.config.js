@@ -1,5 +1,4 @@
-const config = {
-  branches: ['main'],
+branches: ['main'],
   plugins: [
     '@semantic-release/commit-analyzer',
     {
@@ -11,6 +10,7 @@ const config = {
       ]
     },
     ["@semantic-release/release-notes-generator", {
+     "generateNotes": true,
       "writerOpts": {
         "filePath": "RELEASE_NOTES.md"
       }
@@ -20,7 +20,3 @@ const config = {
     }],
     "@semantic-release/git",
     '@semantic-release/github'
-  ]
-};
-
-module.exports = config;
