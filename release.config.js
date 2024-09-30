@@ -11,20 +11,6 @@ const config = {
       ]
     },
     ["@semantic-release/release-notes-generator", {
-      "preset": "conventional",
-      "presetConfig": {
-        "types": [
-          { "type": "feat", "section": "Features" },
-          { "type": "fix", "section": "Bug Fixes" },
-          { "type": "perf", "section": "Performance Improvements" },
-          { "type": "breaking", "section": "Breaking Changes" }
-        ]
-      },
-      "generator": "conventional-commits-parser",
-      "parserOpts": {
-        "headerPattern": /^(\w+)(?:\((.*)\))?: (.*)$/,
-        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
-      },
       "writerOpts": {
         "filePath": "RELEASE_NOTES.md"
       }
@@ -34,4 +20,4 @@ const config = {
   ]
 };
 
-module.exports = config;:wq
+module.exports = config;
