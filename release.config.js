@@ -1,4 +1,4 @@
- branches: ['main'],
+branches: ['main'],
   plugins: [
     '@semantic-release/commit-analyzer',
     {
@@ -10,13 +10,10 @@
       ]
     },
     ["@semantic-release/release-notes-generator", {
+     "generateNotes": true,
       "writerOpts": {
         "filePath": "RELEASE_NOTES.md"
       }
     }],
     "@semantic-release/git",
     '@semantic-release/github'
-  ]
-};
-
-module.exports = config;
