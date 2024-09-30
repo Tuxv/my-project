@@ -15,5 +15,8 @@ branches: ['main'],
         "filePath": "RELEASE_NOTES.md"
       }
     }],
+    ["@semantic-release/changelog", {
+      "changelogFile": "docs/CHANGELOG.md"
+    }],
     "@semantic-release/git",
     '@semantic-release/github'

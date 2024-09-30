@@ -1,3 +1,6 @@
+feature
+new document has to be create
+=======
 my-project
 Semantic-Release:
 Semantic-release automates the whole package release workflow including determining the next version number, generating the release notes, and publishing the package. Semantic Release automates the process of managing Semantic Versioning in software development.
@@ -105,4 +108,5 @@ Go to the Actions tab in your GitHub repository.
 Look for the workflow that was triggered by your push.
 Check if the workflow completed successfully. If there are any errors, review the logs to diagnose the issue.
 now we have check by u
+ main
  main
