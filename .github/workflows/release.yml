@@ -1,11 +1,12 @@
-
 name: Release
+
 on:
-  workflow_dispatch:
   push:
     branches: [ main ]
   pull_request:
+    types: [closed]
     branches: [ main, master ]
+    if: github.event.pull_request.merged == true
 
 jobs:
   release:
