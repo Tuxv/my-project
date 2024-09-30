@@ -134,5 +134,10 @@ Go to the Actions tab in your GitHub repository.
 Look for the workflow that was triggered by your push.
 Check if the workflow completed successfully. If there are any errors, review the logs to diagnose the issue.
 now we have check by using pullrequest
+<<<<<<< HEAD
 now we have to check change log file
 now we have to generate logs
+=======
+feature
+now we have to check change log file main
+>>>>>>> b0b1de10ba798453f65f9e82acfac2ceafddde4e
