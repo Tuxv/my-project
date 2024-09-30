@@ -104,5 +104,8 @@ GitHub Actions (or your CI/CD tool)
 Go to the Actions tab in your GitHub repository.
 Look for the workflow that was triggered by your push.
 Check if the workflow completed successfully. If there are any errors, review the logs to diagnose the issue.
+<<<<<<< HEAD
 now we have check by u
  main
+=======
+>>>>>>> 6076e84 (new changes)
