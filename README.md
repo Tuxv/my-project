@@ -15,39 +15,10 @@ Developers follow a conventional commit format where the type of change is inclu
  Fix: correct a bug in the login feature (This would trigger a PATCH release).
  Feat: add a new search functionality (This would trigger a MINOR release).
  Breaking change: updated API endpoint (This would trigger a MAJOR release).
- Automated Versioning:
-  Once a pull request or commit is merged, Semantic Release analyzes the commit history and    automatically determines whether the version number should increment based on SemVer rules.
- Semantic-Release installation and configuration guide:
-•	Run the following command to install semantic-release and the necessary plugins as dev dependencies
-npm install --save-dev semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github 
-•	Create a release.config.js file
-Create a configuration file for semantic-release in the root of your project. This file defines the release process. 
-Below is the file format
-{
-  "branches": ["main"],
-  "plugins": [
-    [
-      "@semantic-release/commit-analyzer",
-      {
-        "preset": "conventionalcommits",
-        "releaseRules": [
-          { "type": "fix", "release": "patch" },
-          { "type": "feat", "release": "minor" },
-          { "type": "perf", "release": "patch" },
-          { "type": "breaking", "release": "major" }
-        ]
-      }
-    ],
-    "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
-    "@semantic-release/github",
-    "@semantic-release/git"
-  ]
-}
 
-•	Now we have to configure the GitHub Actions workflow file that defines the steps to execute semantic-release in your CI/CD pipeline.
-      File name with extension .github/workflows/release.yml
 
+ feature
+=======
 name: Release
 
 on:
@@ -134,3 +105,4 @@ Go to the Actions tab in your GitHub repository.
 Look for the workflow that was triggered by your push.
 Check if the workflow completed successfully. If there are any errors, review the logs to diagnose the issue.
 now we have check by u
+ main
