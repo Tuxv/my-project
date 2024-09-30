@@ -1,5 +1,4 @@
-const config = {
-  branches: ['main'],
+ branches: ['main'],
   plugins: [
     '@semantic-release/commit-analyzer',
     {
